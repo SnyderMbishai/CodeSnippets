@@ -19,6 +19,7 @@ Attributes:
     Class attributes
 """
 
+
 class Dog:
     # example of a class attribute
     species = "Canis familiaris"
@@ -32,11 +33,14 @@ class Dog:
 
     # Instance method
     def __str__(self):
-        return f"{self.name} is {self.age} years old and belongs to {self.species} species"
+        return (
+            f"{self.name} is {self.age} years old and belongs to {self.species} species"
+        )
 
     # Instance method
     def speak(self, sound):
         return f"{self.name} says {sound}"
+
 
 # Child class inheriting Dog() class above(parent class)
 class BullDog(Dog):
@@ -46,7 +50,7 @@ class BullDog(Dog):
         return super().speak(sound)
 
 
-if __name__=="__main__":    
+if __name__ == "__main__":
     # Class object instance
     my_dog = Dog(age=4, name="spirit", breed="bulldog", owner="Mbishai")
     print(my_dog)
@@ -55,6 +59,3 @@ if __name__=="__main__":
     my_bulldog = BullDog(age=3, name="Rex", breed="bulldog", owner="Eve")
     print(my_bulldog)
     print(my_bulldog.speak())
-
-
-
